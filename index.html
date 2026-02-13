@@ -1,89 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Itinex Solutions - IT Services</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Itinex Solutions | Cyber IT Services</title>
+
+<meta name="description" content="Professional CCTV, Networking, Computer Repair and Cyber IT Services in Jammu">
+
+<style>
+
+html{scroll-behavior:smooth;}
+
+body{
+margin:0;
+font-family:Arial;
+background:#0a0a0a;
+color:white;
+overflow-x:hidden;
+}
+
+/* Neon Background Animation */
+body::before{
+content:"";
+position:fixed;
+width:100%;
+height:100%;
+background:linear-gradient(45deg,#00f7ff,#ff00c8,#00ff88);
+background-size:400% 400%;
+animation:neon 10s ease infinite;
+z-index:-1;
+opacity:0.08;
+}
+
+@keyframes neon{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+header{
+background:#111;
+padding:15px;
+position:sticky;
+top:0;
+z-index:1000;
+text-align:center;
+}
+
+nav a{
+color:white;
+margin:15px;
+text-decoration:none;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#00f7ff;
+}
+
+section{
+padding:100px 20px;
+text-align:center;
+}
+
+.hero h1{
+font-size:45px;
+text-shadow:0 0 20px #00f7ff;
+}
+
+/* Cards */
+.card{
+background:#111;
+margin:20px auto;
+padding:25px;
+max-width:800px;
+border-radius:10px;
+transition:0.4s;
+box-shadow:0 0 15px #00f7ff;
+}
+
+.card:hover{
+transform:scale(1.05);
+box-shadow:0 0 25px #ff00c8;
+}
+
+/* Review Box */
+.review-box{
+background:#111;
+padding:20px;
+margin:20px auto;
+max-width:600px;
+border-left:4px solid #00f7ff;
+}
+
+/* Contact Form */
+input, textarea{
+width:80%;
+padding:10px;
+margin:10px;
+border:none;
+border-radius:5px;
+}
+
+button{
+padding:10px 25px;
+background:#00f7ff;
+border:none;
+border-radius:5px;
+cursor:pointer;
+font-weight:bold;
+}
+
+button:hover{
+background:#ff00c8;
+color:white;
+}
+
+/* WhatsApp Floating Button */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px;
+border-radius:50%;
+font-size:20px;
+text-decoration:none;
+box-shadow:0 0 15px #25D366;
+}
+
+footer{
+background:#111;
+padding:20px;
+text-align:center;
+}
+
+</style>
 </head>
+
 <body>
 
-    <header>
-        <div class="top-bar">
-            <span><i class="fas fa-phone"></i> +91 7051295984</span>
-            <span><i class="fas fa-envelope"></i> amit@itinexsolutions.in</span>
-        </div>
-        <nav>
-            <div class="logo">ITINEX <span>SOLUTIONS</span></div>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+<h2>ITINEX SOLUTIONS</h2>
+<nav>
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#about">About</a>
+<a href="#reviews">Reviews</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>All IT Solutions <br> Under One Roof</h1>
-            <p>www.itinexsolutions.in</p>
-            <a href="#" class="btn-main">GET A FREE QUOTE</a>
-        </div>
-    </section>
+<section id="home" class="hero">
+<h1>Secure. Smart. Professional IT Solutions</h1>
+<p>CCTV • Networking • Computer Repair • AMC • Remote Support</p>
+</section>
 
-    <section class="about">
-        <div class="container">
-            <h2>About Itinex Solutions</h2>
-            <p>Itinex Solutions is your one-stop IT support provider based in Jammu, offering a comprehensive suite of services to meet all your business and home IT needs.</p>
-            <a href="#" class="btn-secondary">GET A FREE QUOTE</a>
-        </div>
-    </section>
+<section id="services">
+<h2>Our Advanced Services</h2>
 
-    <section class="services-grid">
-        <div class="card">
-            <i class="fas fa-camera"></i>
-            <h3>CCTV Installation</h3>
-            <p>Professional CCTV setup for enhanced security.</p>
-            <button class="learn-btn">LEARN MORE</button>
-        </div>
-        <div class="card">
-            <i class="fas fa-laptop-medical"></i>
-            <h3>Computer Repair</h3>
-            <p>Expert repair services for all computer issues.</p>
-            <button class="learn-btn">LEARN MORE</button>
-        </div>
-        <div class="card">
-            <i class="fas fa-network-wired"></i>
-            <h3>Networking</h3>
-            <p>Robust networking solutions for seamless connectivity.</p>
-            <button class="learn-btn">LEARN MORE</button>
-        </div>
-        <div class="card">
-            <i class="fas fa-shield-alt"></i>
-            <h3>AMC</h3>
-            <p>Annual Maintenance Contracts (AMC) to keep systems in check.</p>
-            <button class="learn-btn">LEARN MORE</button>
-        </div>
-    </section>
+<div class="card">
+<h3>CCTV Security Systems</h3>
+<p>HD/IP Camera Setup, Remote Monitoring, Complete Security Installation.</p>
+</div>
 
-    <section class="director-profile">
-        <div class="profile-container">
-            <div class="profile-info">
-                <h2>Our Services</h2>
-                <h3>Your Trusted IT Partner</h3>
-                <p>Amit Kumar has over 10 years of experience in IT and leads a team of experts dedicated to providing exceptional services.</p>
-            </div>
-            <div class="profile-card">
-                <h3>Amit Kumar</h3>
-                <p>Technical Director</p>
-                <p><i class="fas fa-phone"></i> +91 7051295984</p>
-                <p><i class="fas fa-map-marker-alt"></i> Jammu (Online Call + Engineer Visit)</p>
-                <a href="#" class="btn-main">LEARN MORE</a>
-            </div>
-        </div>
-    </section>
+<div class="card">
+<h3>Networking & WiFi Setup</h3>
+<p>Office LAN Setup, Router Configuration, Network Troubleshooting.</p>
+</div>
+
+<div class="card">
+<h3>Computer Repair & AMC</h3>
+<p>Laptop/Desktop Repair, Virus Removal, Annual Maintenance.</p>
+</div>
+
+<div class="card">
+<h3>Cyber Security Solutions</h3>
+<p>Data Protection, Backup Systems, Secure Network Configuration.</p>
+</div>
+
+</section>
+
+<section id="about">
+<h2>About Us</h2>
+<p>Itinex Solutions provides reliable IT services in Jammu with professional support and secure solutions.</p>
+</section>
+
+<section id="reviews">
+<h2>Customer Reviews</h2>
+
+<div class="review-box">
+⭐⭐⭐⭐⭐  
+<p>Excellent service and quick response. Highly recommended.</p>
+</div>
+
+<div class="review-box">
+⭐⭐⭐⭐⭐  
+<p>Professional CCTV installation. Very satisfied.</p>
+</div>
+
+<h3>Leave Your Review</h3>
+<input type="text" placeholder="Your Name">
+<textarea placeholder="Write Your Review"></textarea>
+<button>Submit Review</button>
+
+</section>
+
+<section id="contact">
+<h2>Contact Us</h2>
+
+<form action="https://formsubmit.co/amit@itinexsolutions.in" method="POST">
+<input type="text" name="name" placeholder="Your Name" required><br>
+<input type="email" name="email" placeholder="Your Email" required><br>
+<textarea name="message" rows="5" placeholder="Your Message" required></textarea><br>
+<button type="submit">Send Message</button>
+</form>
+
+</section>
+
+<footer>
+© 2026 Itinex Solutions | All Rights Reserved
+</footer>
+
+<a href="https://wa.me/91XXXXXXXXXX" class="whatsapp">💬</a>
 
 </body>
 </html>
