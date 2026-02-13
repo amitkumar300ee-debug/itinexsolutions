@@ -14,6 +14,8 @@ color:white;
 scroll-behavior:smooth;
 }
 
+/* HEADER */
+
 header{
 background:#111827;
 padding:15px 10%;
@@ -40,11 +42,12 @@ nav a:hover{
 color:white;
 }
 
+/* HERO SECTION */
+
 .hero{
 height:100vh;
-background:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url('server.jpg');
-background-size:cover;
-background-position:center;
+background:linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+           url('hero-bg.gif') no-repeat center center/cover;
 display:flex;
 flex-direction:column;
 justify-content:center;
@@ -55,13 +58,17 @@ padding:20px;
 
 .hero h1{
 font-size:55px;
-color:#00bfff;
+color:#00e0ff;
+text-shadow:0 0 20px #00e0ff;
 }
 
 .hero p{
 width:70%;
-font-size:20px;
+font-size:22px;
+margin-top:10px;
 }
+
+/* SECTIONS */
 
 section{
 padding:70px 10%;
@@ -73,6 +80,8 @@ font-size:40px;
 color:#00bfff;
 margin-bottom:50px;
 }
+
+/* SERVICES */
 
 .service{
 display:flex;
@@ -101,12 +110,16 @@ font-size:28px;
 line-height:1.8;
 }
 
+/* OWNER */
+
 .owner{
 background:#111827;
 padding:50px;
 text-align:center;
 border-top:2px solid #00bfff;
 }
+
+/* WHATSAPP */
 
 .whatsapp{
 position:fixed;
@@ -120,34 +133,13 @@ text-decoration:none;
 font-size:25px;
 }
 
+/* FOOTER */
+
 footer{
 background:black;
 padding:20px;
 text-align:center;
 color:gray;
-}
-  
-.hero{
-  height:100vh;
-  background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
-              url('hero-bg.gif') no-repeat center center/cover;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  color:white;
-}
-
-.hero h1{
-  font-size:55px;
-  color:#00e0ff;
-  text-shadow:0 0 20px #00e0ff;
-}
-
-.hero p{
-  font-size:22px;
-  margin-top:10px;
 }
 
 </style>
@@ -165,10 +157,14 @@ color:gray;
 </nav>
 </header>
 
+<!-- HERO -->
+
 <div class="hero" id="home">
 <h1>ITINEX SOLUTIONS</h1>
 <p>Complete IT Infrastructure, Cyber Security & Enterprise Networking Solutions in Jammu</p>
 </div>
+
+<!-- SERVICES -->
 
 <section id="services">
 <h2 class="section-title">Our Professional Services</h2>
@@ -177,7 +173,7 @@ color:gray;
 <img src="cctv.png">
 <div class="service-content">
 <h3>📹 CCTV Installation & Surveillance</h3>
-<p>We provide high-quality IP & Analog CCTV installation for homes, offices and industries. Remote monitoring, night vision setup, DVR/NVR configuration and mobile access support included.</p>
+<p>We provide high-quality IP & Analog CCTV installation for homes, offices and industries. Remote monitoring, DVR/NVR configuration and mobile access support included.</p>
 </div>
 </div>
 
@@ -185,7 +181,7 @@ color:gray;
 <img src="networking.jpg">
 <div class="service-content">
 <h3>🌐 Networking Solutions</h3>
-<p>Complete LAN/WAN setup, Router configuration, Structured cabling, Office networking and enterprise-grade connectivity solutions.</p>
+<p>Complete LAN/WAN setup, Router configuration, Structured cabling and enterprise-grade connectivity solutions.</p>
 </div>
 </div>
 
@@ -193,7 +189,7 @@ color:gray;
 <img src="server.jpg">
 <div class="service-content">
 <h3>🖥 Server Setup & Management</h3>
-<p>Windows & Linux Server installation, Active Directory, Domain Controller, Data storage server & business network management.</p>
+<p>Windows & Linux Server installation, Active Directory, Domain Controller and business network management.</p>
 </div>
 </div>
 
@@ -201,7 +197,7 @@ color:gray;
 <img src="cyber.jpg">
 <div class="service-content">
 <h3>🔐 Cyber Security Services</h3>
-<p>Firewall configuration, Antivirus deployment, Endpoint protection, Threat detection and IT security consulting for businesses.</p>
+<p>Firewall configuration, Antivirus deployment, Endpoint protection and IT security consulting for businesses.</p>
 </div>
 </div>
 
@@ -209,25 +205,31 @@ color:gray;
 <img src="repair.jpg">
 <div class="service-content">
 <h3>🛠 Computer Repair & IT Support</h3>
-<p>Hardware troubleshooting, OS installation, software support, remote IT assistance and Annual Maintenance Contracts (AMC).</p>
+<p>Hardware troubleshooting, OS installation, remote IT assistance and Annual Maintenance Contracts (AMC).</p>
 </div>
 </div>
 
 </section>
+
+<!-- ABOUT -->
 
 <section id="about">
 <h2 class="section-title">About Itinex Solutions</h2>
 <p>
-Itinex Solutions is a professional IT service company delivering advanced digital security and infrastructure solutions. 
+Itinex Solutions is a professional IT service company delivering advanced digital security and infrastructure solutions.
 We ensure reliable network connectivity, secure systems and 24/7 IT support services.
 </p>
 </section>
+
+<!-- OWNER -->
 
 <section class="owner">
 <h2>Company Owner</h2>
 <p><strong>DLN H Amit Kumar</strong></p>
 <p>Founder & IT Infrastructure Specialist</p>
 </section>
+
+<!-- CONTACT -->
 
 <section id="contact">
 <h2 class="section-title">Contact Us</h2>
