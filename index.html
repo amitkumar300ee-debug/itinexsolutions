@@ -1,113 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
+<title>Itinex Solutions | Advanced IT & Cyber Security Services</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ITINEX Solutions | Cyber Security & IT Services</title>
 
 <style>
 
 body{
-    margin:0;
-    font-family:Arial, Helvetica, sans-serif;
-    background:#0f0f0f;
-    color:white;
+margin:0;
+font-family:Arial, sans-serif;
+background:#0a0f1c;
+color:white;
+scroll-behavior:smooth;
 }
 
 header{
-    background:#111;
-    padding:20px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+background:#111827;
+padding:15px 10%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
 }
 
-header h2{
-    margin:0;
-    color:#25D366;
+header img{
+height:55px;
 }
 
 nav a{
-    color:white;
-    text-decoration:none;
-    margin-left:20px;
+color:#00bfff;
+margin:0 15px;
+text-decoration:none;
+font-weight:bold;
 }
 
 nav a:hover{
-    color:#25D366;
+color:white;
 }
 
-/* HERO SECTION */
 .hero{
-    height:100vh;
-    background:url('hero-bg.jpg') no-repeat center center/cover;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
+height:100vh;
+background:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url('server.jpg');
+background-size:cover;
+background-position:center;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
 }
 
 .hero h1{
-    font-size:50px;
-    margin-bottom:10px;
+font-size:55px;
+color:#00bfff;
 }
 
 .hero p{
-    font-size:20px;
+width:70%;
+font-size:20px;
 }
 
-/* SERVICES */
-.services{
-    padding:60px 20px;
-    text-align:center;
-    background:#111;
+section{
+padding:70px 10%;
 }
 
-.service-box{
-    display:inline-block;
-    width:250px;
-    margin:20px;
-    padding:20px;
-    background:#1c1c1c;
-    border-radius:10px;
+.section-title{
+text-align:center;
+font-size:40px;
+color:#00bfff;
+margin-bottom:50px;
 }
 
-.service-box:hover{
-    transform:scale(1.05);
-    transition:0.3s;
+.service{
+display:flex;
+flex-wrap:wrap;
+align-items:center;
+margin-bottom:80px;
+gap:40px;
 }
 
-/* ABOUT */
-.about{
-    padding:60px 20px;
-    text-align:center;
+.service img{
+width:400px;
+border-radius:10px;
+box-shadow:0 0 20px #00bfff;
 }
 
-/* CONTACT */
-.contact{
-    padding:60px 20px;
-    text-align:center;
-    background:#111;
+.service-content{
+flex:1;
 }
 
-button{
-    padding:10px 20px;
-    background:#25D366;
-    border:none;
-    color:white;
-    cursor:pointer;
-    border-radius:5px;
+.service-content h3{
+color:#00bfff;
+font-size:28px;
 }
 
-button:hover{
-    background:#1ebd5a;
+.service-content p{
+line-height:1.8;
 }
 
-/* FOOTER */
+.owner{
+background:#111827;
+padding:50px;
+text-align:center;
+border-top:2px solid #00bfff;
+}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px;
+border-radius:50%;
+text-decoration:none;
+font-size:25px;
+}
+
 footer{
-    background:black;
-    padding:20px;
-    text-align:center;
+background:black;
+padding:20px;
+text-align:center;
+color:gray;
 }
 
 </style>
@@ -116,56 +133,90 @@ footer{
 <body>
 
 <header>
-    <h2>ITINEX SOLUTIONS</h2>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-    </nav>
+<img src="logo.png">
+<nav>
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
 </header>
 
-<section class="hero">
-    <div>
-        <h1>Professional Cyber Security & IT Solutions</h1>
-        <p>Secure | Protect | Monitor</p>
-    </div>
+<div class="hero" id="home">
+<h1>ITINEX SOLUTIONS</h1>
+<p>Complete IT Infrastructure, Cyber Security & Enterprise Networking Solutions in Jammu</p>
+</div>
+
+<section id="services">
+<h2 class="section-title">Our Professional Services</h2>
+
+<div class="service">
+<img src="cctv.png">
+<div class="service-content">
+<h3>📹 CCTV Installation & Surveillance</h3>
+<p>We provide high-quality IP & Analog CCTV installation for homes, offices and industries. Remote monitoring, night vision setup, DVR/NVR configuration and mobile access support included.</p>
+</div>
+</div>
+
+<div class="service">
+<img src="networking.jpg">
+<div class="service-content">
+<h3>🌐 Networking Solutions</h3>
+<p>Complete LAN/WAN setup, Router configuration, Structured cabling, Office networking and enterprise-grade connectivity solutions.</p>
+</div>
+</div>
+
+<div class="service">
+<img src="server.jpg">
+<div class="service-content">
+<h3>🖥 Server Setup & Management</h3>
+<p>Windows & Linux Server installation, Active Directory, Domain Controller, Data storage server & business network management.</p>
+</div>
+</div>
+
+<div class="service">
+<img src="cyber.jpg">
+<div class="service-content">
+<h3>🔐 Cyber Security Services</h3>
+<p>Firewall configuration, Antivirus deployment, Endpoint protection, Threat detection and IT security consulting for businesses.</p>
+</div>
+</div>
+
+<div class="service">
+<img src="repair.jpg">
+<div class="service-content">
+<h3>🛠 Computer Repair & IT Support</h3>
+<p>Hardware troubleshooting, OS installation, software support, remote IT assistance and Annual Maintenance Contracts (AMC).</p>
+</div>
+</div>
+
 </section>
 
-<section class="services" id="services">
-    <h2>Our Services</h2>
-
-    <div class="service-box">
-        <h3>Cyber Security</h3>
-        <p>Network Security, Firewall, Threat Protection</p>
-    </div>
-
-    <div class="service-box">
-        <h3>Server Management</h3>
-        <p>Windows & Linux Server Installation & Support</p>
-    </div>
-
-    <div class="service-box">
-        <h3>CCTV Installation</h3>
-        <p>Complete CCTV Setup & Monitoring Solutions</p>
-    </div>
-
+<section id="about">
+<h2 class="section-title">About Itinex Solutions</h2>
+<p>
+Itinex Solutions is a professional IT service company delivering advanced digital security and infrastructure solutions. 
+We ensure reliable network connectivity, secure systems and 24/7 IT support services.
+</p>
 </section>
 
-<section class="about" id="about">
-    <h2>About Us</h2>
-    <p>ITINEX Solutions provides professional Cyber Security, Server Management and IT Infrastructure services to protect and grow your business.</p>
+<section class="owner">
+<h2>Company Owner</h2>
+<p><strong>DLN H Amit Kumar</strong></p>
+<p>Founder & IT Infrastructure Specialist</p>
 </section>
 
-<section class="contact" id="contact">
-    <h2>Contact Us</h2>
-    <p>Email: info@itinexsolutions.in</p>
-    <p>Phone: +91 XXXXX XXXXX</p>
-    <button>Contact Now</button>
+<section id="contact">
+<h2 class="section-title">Contact Us</h2>
+<p>Email: info@itinexsolutions.in</p>
+<p>Phone: +91-XXXXXXXXXX</p>
+<p>Location: Jammu, India</p>
 </section>
+
+<a href="https://wa.me/91XXXXXXXXXX" class="whatsapp">💬</a>
 
 <footer>
-    <p>© 2026 ITINEX Solutions. All Rights Reserved.</p>
+© 2026 Itinex Solutions | All Rights Reserved
 </footer>
 
 </body>
