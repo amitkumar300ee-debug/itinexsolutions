@@ -42,43 +42,60 @@ nav a:hover{
 color:white;
 }
 
-/* HERO SECTION */
+/* HERO */
 
 .hero{
+position:relative;
 height:100vh;
-background:linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
-           url('hero-bg.jpg') no-repeat center center/cover;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-padding:20px;
+overflow:hidden;
+}
+
+.hero::before{
+content:"";
+position:absolute;
+width:100%;
+height:100%;
+background:url('hero-bg.gif') no-repeat center center/cover;
+z-index:-2;
+}
+
+.hero::after{
+content:"";
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.75);
+z-index:-1;
 }
 
 .hero h1{
-font-size:55px;
+font-size:60px;
 color:#00e0ff;
-text-shadow:0 0 20px #00e0ff;
+text-shadow:0 0 25px #00e0ff;
 }
 
 .hero p{
 width:70%;
 font-size:22px;
-margin-top:10px;
+margin-top:15px;
 }
 
 /* SECTIONS */
 
 section{
-padding:70px 10%;
+padding:80px 10%;
 }
 
 .section-title{
 text-align:center;
-font-size:40px;
+font-size:42px;
 color:#00bfff;
-margin-bottom:50px;
+margin-bottom:60px;
 }
 
 /* SERVICES */
@@ -87,14 +104,14 @@ margin-bottom:50px;
 display:flex;
 flex-wrap:wrap;
 align-items:center;
-margin-bottom:80px;
-gap:40px;
+margin-bottom:100px;
+gap:50px;
 }
 
 .service img{
-width:400px;
-border-radius:10px;
-box-shadow:0 0 20px #00bfff;
+width:420px;
+border-radius:15px;
+box-shadow:0 0 25px #00bfff;
 }
 
 .service-content{
@@ -103,20 +120,70 @@ flex:1;
 
 .service-content h3{
 color:#00bfff;
-font-size:28px;
+font-size:30px;
 }
 
 .service-content p{
-line-height:1.8;
+line-height:1.9;
+font-size:17px;
+}
+
+/* WHY US */
+
+.why{
+background:#111827;
+text-align:center;
+}
+
+.why-box{
+margin-bottom:30px;
+font-size:18px;
+}
+
+/* PROCESS */
+
+.process-step{
+margin-bottom:25px;
+font-size:18px;
+}
+
+/* TESTIMONIAL */
+
+.testimonial{
+background:#111827;
+padding:40px;
+border-left:5px solid #00bfff;
+margin-bottom:30px;
+}
+
+/* CTA */
+
+.cta{
+text-align:center;
+background:#00bfff;
+color:black;
+padding:60px;
+}
+
+.cta h2{
+font-size:35px;
 }
 
 /* OWNER */
 
 .owner{
 background:#111827;
-padding:50px;
+padding:60px;
 text-align:center;
 border-top:2px solid #00bfff;
+}
+
+/* CONTACT */
+
+.contact-box{
+text-align:center;
+font-size:18px;
+line-height:2;
 }
 
 /* WHATSAPP */
@@ -152,19 +219,15 @@ color:gray;
 <nav>
 <a href="#home">Home</a>
 <a href="#services">Services</a>
-<a href="#about">About</a>
+<a href="#why">Why Us</a>
 <a href="#contact">Contact</a>
 </nav>
 </header>
 
-<!-- HERO -->
-
 <div class="hero" id="home">
 <h1>ITINEX SOLUTIONS</h1>
-<p>Complete IT Infrastructure, Cyber Security & Enterprise Networking Solutions in Jammu</p>
+<p>Complete IT Infrastructure, Cyber Security, Networking & Enterprise Solutions in Jammu</p>
 </div>
-
-<!-- SERVICES -->
 
 <section id="services">
 <h2 class="section-title">Our Professional Services</h2>
@@ -173,15 +236,15 @@ color:gray;
 <img src="cctv.png">
 <div class="service-content">
 <h3>📹 CCTV Installation & Surveillance</h3>
-<p>We provide high-quality IP & Analog CCTV installation for homes, offices and industries. Remote monitoring, DVR/NVR configuration and mobile access support included.</p>
+<p>High-quality IP & Analog CCTV setup for residential and commercial environments. We provide DVR/NVR configuration, remote mobile monitoring, night vision setup, and full security planning solutions.</p>
 </div>
 </div>
 
 <div class="service">
 <img src="networking.jpg">
 <div class="service-content">
-<h3>🌐 Networking Solutions</h3>
-<p>Complete LAN/WAN setup, Router configuration, Structured cabling and enterprise-grade connectivity solutions.</p>
+<h3>🌐 Enterprise Networking Solutions</h3>
+<p>Structured cabling, router & switch configuration, LAN/WAN setup, firewall integration, WiFi deployment, and complete office network design.</p>
 </div>
 </div>
 
@@ -189,39 +252,57 @@ color:gray;
 <img src="server.jpg">
 <div class="service-content">
 <h3>🖥 Server Setup & Management</h3>
-<p>Windows & Linux Server installation, Active Directory, Domain Controller and business network management.</p>
+<p>Windows & Linux server installation, Active Directory, Domain Controller, Data backup solutions and enterprise-level system administration.</p>
 </div>
 </div>
 
 <div class="service">
 <img src="cyber.jpg">
 <div class="service-content">
-<h3>🔐 Cyber Security Services</h3>
-<p>Firewall configuration, Antivirus deployment, Endpoint protection and IT security consulting for businesses.</p>
-</div>
-</div>
-
-<div class="service">
-<img src="repair.jpg">
-<div class="service-content">
-<h3>🛠 Computer Repair & IT Support</h3>
-<p>Hardware troubleshooting, OS installation, remote IT assistance and Annual Maintenance Contracts (AMC).</p>
+<h3>🔐 Advanced Cyber Security</h3>
+<p>Firewall setup, Endpoint protection, Vulnerability assessment, Threat detection, IT security audit and data protection strategies.</p>
 </div>
 </div>
 
 </section>
 
-<!-- ABOUT -->
+<section id="why" class="why">
+<h2 class="section-title">Why Choose Itinex Solutions?</h2>
 
-<section id="about">
-<h2 class="section-title">About Itinex Solutions</h2>
-<p>
-Itinex Solutions is a professional IT service company delivering advanced digital security and infrastructure solutions.
-We ensure reliable network connectivity, secure systems and 24/7 IT support services.
-</p>
+<div class="why-box">✔ Certified IT Infrastructure Specialists</div>
+<div class="why-box">✔ Fast Deployment & Reliable Support</div>
+<div class="why-box">✔ Affordable Enterprise Solutions</div>
+<div class="why-box">✔ 24/7 Technical Assistance</div>
+
 </section>
 
-<!-- OWNER -->
+<section>
+<h2 class="section-title">Our Working Process</h2>
+
+<div class="process-step">1️⃣ Requirement Analysis & Consultation</div>
+<div class="process-step">2️⃣ Infrastructure Planning & Security Design</div>
+<div class="process-step">3️⃣ Installation & Configuration</div>
+<div class="process-step">4️⃣ Testing, Optimization & Maintenance</div>
+
+</section>
+
+<section>
+<h2 class="section-title">Client Testimonials</h2>
+
+<div class="testimonial">
+"Professional team and excellent service. Highly recommended for business networking setup."
+</div>
+
+<div class="testimonial">
+"They secured our office network and improved performance significantly."
+</div>
+
+</section>
+
+<section class="cta">
+<h2>Need Professional IT Solutions?</h2>
+<p>Contact us today for secure and reliable infrastructure services.</p>
+</section>
 
 <section class="owner">
 <h2>Company Owner</h2>
@@ -229,13 +310,13 @@ We ensure reliable network connectivity, secure systems and 24/7 IT support serv
 <p>Founder & IT Infrastructure Specialist</p>
 </section>
 
-<!-- CONTACT -->
-
 <section id="contact">
 <h2 class="section-title">Contact Us</h2>
-<p>Email: info@itinexsolutions.in</p>
-<p>Phone: +91-XXXXXXXXXX</p>
-<p>Location: Jammu, India</p>
+<div class="contact-box">
+📧 Email: info@itinexsolutions.in<br>
+📞 Phone: +91-XXXXXXXXXX<br>
+📍 Location: Jammu, India
+</div>
 </section>
 
 <a href="https://wa.me/91XXXXXXXXXX" class="whatsapp">💬</a>
