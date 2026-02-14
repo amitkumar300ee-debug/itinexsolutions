@@ -98,6 +98,32 @@ color:#00bfff;
 margin-bottom:60px;
 }
 
+/* LOGO WATERMARK SECTIONS */
+
+.logo-bg-section{
+position:relative;
+overflow:hidden;
+}
+
+.logo-bg-section::before{
+content:"";
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+width:700px;
+height:700px;
+background:url('logo.png') no-repeat center center/contain;
+opacity:0.05;
+z-index:0;
+pointer-events:none;
+}
+
+.logo-bg-section > *{
+position:relative;
+z-index:1;
+}
+
 /* SERVICES */
 
 .service{
@@ -178,6 +204,56 @@ text-align:center;
 border-top:2px solid #00bfff;
 }
 
+/* MESSAGE SECTION */
+
+.message-section{
+background:#111827;
+padding:80px 10%;
+text-align:center;
+}
+
+.message-section h2{
+color:#00bfff;
+font-size:38px;
+margin-bottom:40px;
+}
+
+.message-form{
+max-width:600px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+.message-form input,
+.message-form textarea{
+padding:15px;
+border:none;
+border-radius:8px;
+font-size:16px;
+outline:none;
+}
+
+.message-form textarea{
+resize:none;
+height:150px;
+}
+
+.message-form button{
+padding:15px;
+background:#00bfff;
+border:none;
+border-radius:8px;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.message-form button:hover{
+background:#009acd;
+}
+
 /* CONTACT */
 
 .contact-box{
@@ -236,7 +312,7 @@ color:gray;
 <img src="cctv.png">
 <div class="service-content">
 <h3>📹 CCTV Installation & Surveillance</h3>
-<p>High-quality IP & Analog CCTV setup for residential and commercial environments. We provide DVR/NVR configuration, remote mobile monitoring, night vision setup, and full security planning solutions.</p>
+<p>High-quality IP & Analog CCTV setup for residential and commercial environments.</p>
 </div>
 </div>
 
@@ -244,7 +320,7 @@ color:gray;
 <img src="networking.jpg">
 <div class="service-content">
 <h3>🌐 Enterprise Networking Solutions</h3>
-<p>Structured cabling, router & switch configuration, LAN/WAN setup, firewall integration, WiFi deployment, and complete office network design.</p>
+<p>Structured cabling, router & switch configuration, LAN/WAN setup, firewall integration.</p>
 </div>
 </div>
 
@@ -252,7 +328,7 @@ color:gray;
 <img src="server.jpg">
 <div class="service-content">
 <h3>🖥 Server Setup & Management</h3>
-<p>Windows & Linux server installation, Active Directory, Domain Controller, Data backup solutions and enterprise-level system administration.</p>
+<p>Windows & Linux server installation, Active Directory & enterprise system administration.</p>
 </div>
 </div>
 
@@ -260,13 +336,13 @@ color:gray;
 <img src="cyber.jpg">
 <div class="service-content">
 <h3>🔐 Advanced Cyber Security</h3>
-<p>Firewall setup, Endpoint protection, Vulnerability assessment, Threat detection, IT security audit and data protection strategies.</p>
+<p>Firewall setup, Endpoint protection, Vulnerability assessment & IT security audit.</p>
 </div>
 </div>
 
 </section>
 
-<section id="why" class="why">
+<section id="why" class="why logo-bg-section">
 <h2 class="section-title">Why Choose Itinex Solutions?</h2>
 
 <div class="why-box">✔ Certified IT Infrastructure Specialists</div>
@@ -276,7 +352,7 @@ color:gray;
 
 </section>
 
-<section>
+<section class="logo-bg-section">
 <h2 class="section-title">Our Working Process</h2>
 
 <div class="process-step">1️⃣ Requirement Analysis & Consultation</div>
@@ -308,6 +384,18 @@ color:gray;
 <h2>Company Owner</h2>
 <p><strong>DLN H Amit Kumar</strong></p>
 <p>Founder & IT Infrastructure Specialist</p>
+</section>
+
+<section class="message-section">
+<h2>Send Us a Message</h2>
+
+<form class="message-form">
+<input type="text" placeholder="Your Full Name" required>
+<input type="email" placeholder="Your Email Address" required>
+<input type="tel" placeholder="Your Phone Number">
+<textarea placeholder="Write Your Message Here..." required></textarea>
+<button type="submit">Submit Message</button>
+</form>
 </section>
 
 <section id="contact">
