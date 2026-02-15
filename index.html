@@ -73,11 +73,9 @@ nav a:hover{
   text-align:center;
   padding:20px;
   background:url('hero-bgg.jpg') no-repeat center center;
-  background-size:cover;   /* IMPORTANT */
-  background-position:center;
+  background-size:cover;
 }
 
-/* Dark overlay */
 .hero::after{
   content:"";
   position:absolute;
@@ -109,6 +107,7 @@ nav a:hover{
 
 section{
   padding:80px 8%;
+  position:relative;
 }
 
 .section-title{
@@ -187,6 +186,8 @@ section{
   border-top:2px solid #00bfff;
 }
 
+/* ================= CONTACT FORM ================= */
+
 .message-section{
   background:#111827;
   padding:80px 8%;
@@ -251,10 +252,9 @@ footer{
   padding:20px;
   text-align:center;
   color:gray;
-
 }
 
-/* ===== WORKING PROCESS LOGO ===== */
+/* ================= LOGO SECTION 1 ================= */
 
 .logo-bg-1{
   position:relative;
@@ -269,9 +269,9 @@ footer{
   transform:translate(-50%,-50%);
   width:500px;
   height:500px;
-  background:url('logo.png') no-repeat center center;
+  background:url('hero-bgg.jpg') no-repeat center center;
   background-size:contain;
-  opacity:0.06;
+  opacity:0.05;
   z-index:0;
   pointer-events:none;
 }
@@ -281,8 +281,7 @@ footer{
   z-index:1;
 }
 
-
-/* ===== TESTIMONIAL LOGO ===== */
+/* ================= LOGO SECTION 2 ================= */
 
 .logo-bg-2{
   position:relative;
@@ -299,7 +298,7 @@ footer{
   height:500px;
   background:url('logo2.png') no-repeat center center;
   background-size:contain;
-  opacity:0.06;
+  opacity:0.05;
   z-index:0;
   pointer-events:none;
 }
@@ -323,11 +322,6 @@ footer{
     align-items:center;
   }
 
-  .hero{
-    height:100vh;
-    background-size:cover;  /* FIXED */
-  }
-
   .hero h1{
     font-size:32px;
   }
@@ -345,6 +339,12 @@ footer{
   .service img{
     width:80%;
     margin:auto;
+  }
+
+  .logo-bg-1::before,
+  .logo-bg-2::before{
+    width:280px;
+    height:280px;
   }
 }
 
@@ -421,7 +421,7 @@ footer{
 
 
 
-<section id="why" class="why logo-bg-section">
+<section id="why" class="why logo-bg-1">
 <h2 class="section-title">Why Choose Itinex Solutions?</h2>
 
 <div class="why-box">✔ Certified IT Infrastructure Specialists</div>
@@ -431,7 +431,7 @@ footer{
 
 </section>
 
-<section class="logo-bg-section">
+<section class="logo-bg-2">
 <h2 class="section-title">Our Working Process</h2>
 
 <div class="process-step">1️⃣ Requirement Analysis & Consultation</div>
