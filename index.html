@@ -16,32 +16,43 @@ body{
   scroll-behavior:smooth;
 }
 
-/* HEADER */
+/* HEADER (RESPONSIVE) */
 
-header{
-  background:#111827;
-  padding:15px 10%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  position:sticky;
-  top:0;
-  z-index:1000;
+header {
+  background: #111827;
+  padding: 15px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  flex-wrap: wrap;  /* mobile me nav items wrap ho jaye */
 }
 
-header img{
-  height:55px;
+header img {
+  max-height: 55px;  /* laptop default */
+  width: auto;
+  transition: all 0.3s ease; /* smooth resizing */
 }
 
-nav a{
-  color:#00bfff;
-  margin:0 15px;
-  text-decoration:none;
-  font-weight:bold;
+/* NAVIGATION */
+
+nav {
+  display: flex;
+  flex-wrap: wrap;   /* small screen me wrap ho jaye */
+  gap: 15px;
 }
 
-nav a:hover{
-  color:white;
+nav a {
+  color: #00bfff;
+  margin: 5px 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: white;
 }
 
 /* HERO */
@@ -126,25 +137,20 @@ section{
   z-index:1;
 }
 
-/* SERVICES */
+/* SERVICES (GRID LAYOUT) */
 
 .service {
-  display: flex;
-  flex-wrap: wrap;      /* agar screen chhoti ho to next line me shift ho jaye */
+  display: grid;
+  grid-template-columns: 420px 1fr;  /* image fixed, content flexible */
   align-items: center;
   gap: 30px;
   margin-bottom: 80px;
 }
 
 .service img {
-  width: 420px;          /* repair.jpg ke original size ke liye */
+  width: 420px;          /* repair.jpg ke liye same size */
   border-radius: 15px;
   box-shadow: 0 0 25px #00bfff;
-}
-
-.service-content {
-  flex: 1;
-  min-width: 250px;      /* responsive layout ke liye */
 }
 
 .service-content h3 {
@@ -157,7 +163,6 @@ section{
   line-height: 1.9;
   font-size: 17px;
 }
-
 
 /* WHY US */
 
@@ -288,6 +293,33 @@ footer{
   padding:20px;
   text-align:center;
   color:gray;
+}
+
+/* MEDIA QUERIES FOR RESPONSIVENESS */
+
+/* Tablet */
+@media screen and (max-width:1024px){
+  header img { max-height:50px; }
+}
+
+/* Mobile */
+@media screen and (max-width:768px){
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 5%;
+  }
+  header img { max-height:40px; margin-bottom:10px; }
+  nav { flex-direction: column; align-items: center; gap:10px; }
+  nav a { margin:5px 0; }
+  .service { grid-template-columns: 1fr; justify-items: center; text-align: center; }
+  .service img { width:70%; }
+}
+
+/* Small Phones */
+@media screen and (max-width:480px){
+  header img { max-height:35px; }
+  nav a { font-size:14px; }
 }
 
 </style>
