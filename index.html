@@ -6,169 +6,111 @@
 
 <style>
 
-/* GLOBAL */
+/* ================= GLOBAL ================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
 body{
-  margin:0;
   font-family:Arial, sans-serif;
   background:#0a0f1c;
   color:white;
   scroll-behavior:smooth;
 }
 
-/* HEADER (RESPONSIVE) */
-  
-header {
-  background: #111827;
-  padding: 15px 10%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  flex-wrap: wrap;  /* mobile me nav items wrap ho jaye */
+img{
+  max-width:100%;
+  height:auto;
+  display:block;
 }
 
-header img {
-  max-height: 55px;  /* laptop default */
-  width: auto;
-  transition: all 0.3s ease; /* smooth resizing */
+/* ================= HEADER ================= */
+
+header{
+  background:#111827;
+  padding:15px 8%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:sticky;
+  top:0;
+  z-index:1000;
 }
 
-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
+header img{
+  max-height:55px;
 }
 
-nav a {
-  color: #00bfff;
-  margin: 5px 10px;
-  text-decoration: none;
-  font-weight: bold;
+nav{
+  display:flex;
+  gap:20px;
 }
 
-nav a:hover {
-  color: white;
+nav a{
+  color:#00bfff;
+  text-decoration:none;
+  font-weight:bold;
 }
 
-/* MEDIA QUERIES FOR HEADER/LOGO */
-@media screen and (max-width:1024px){
-  header img { max-height:50px; }
+nav a:hover{
+  color:white;
 }
 
-@media screen and (max-width:768px){
-  header {
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 5%;
-  }
-  header img { max-height:40px; margin-bottom:10px; }
-  nav { flex-direction: column; align-items: center; gap:10px; }
-  nav a { margin:5px 0; }
+/* ================= HERO ================= */
+
+.hero{
+  position:relative;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:80px 20px;
+  overflow:hidden;
 }
 
-@media screen and (max-width:480px){
-  header img { max-height:35px; }
-  nav a { font-size:14px; }
+.hero::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:url('hero-bgg.jpg') no-repeat center center;
+  background-size:cover;
+  background-position:center;
+  z-index:-2;
 }
 
-
-/* NAVIGATION */
-
-nav {
-  display: flex;
-  flex-wrap: wrap;   /* small screen me wrap ho jaye */
-  gap: 15px;
+.hero::after{
+  content:"";
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.75);
+  z-index:-1;
 }
 
-nav a {
-  color: #00bfff;
-  margin: 5px 10px;
-  text-decoration: none;
-  font-weight: bold;
+.hero h1{
+  font-size:60px;
+  color:#00e0ff;
+  text-shadow:0 0 25px #00e0ff;
 }
 
-nav a:hover {
-  color: white;
+.hero p{
+  width:70%;
+  font-size:22px;
+  margin-top:15px;
 }
 
-/* HERO */
-
-.hero {
-  position: relative;
-  min-height: 600px;      /* phone desktop mode aur small screens ke liye minimum height */
-  height: 100vh;          /* normal desktop height */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  overflow: hidden;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: url('hero-bgg.jpg') no-repeat center center;
-  background-size: cover; /* ensures image always covers container */
-  z-index: -2;
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.75);
-  z-index: -1;
-}
-
-.hero h1 {
-  font-size: 60px;
-  color: #00e0ff;
-  text-shadow: 0 0 25px #00e0ff;
-}
-
-.hero p {
-  width: 70%;
-  font-size: 22px;
-  margin-top: 15px;
-}
-
-/* RESPONSIVE HERO */
-@media screen and (max-width:768px){
-  .hero {
-    min-height: 500px;  /* mobile height fix */
-  }
-  .hero h1 {
-    font-size: 40px;
-  }
-  .hero p {
-    font-size: 18px;
-    width: 90%;
-  }
-}
-
-@media screen and (max-width:480px){
-  .hero {
-    min-height: 400px;  /* small phones */
-  }
-  .hero h1 {
-    font-size: 32px;
-  }
-  .hero p {
-    font-size: 16px;
-  }
-}
-
-/* SECTIONS */
+/* ================= SECTIONS ================= */
 
 section{
-  padding:80px 10%;
+  padding:80px 8%;
 }
 
 .section-title{
@@ -178,67 +120,34 @@ section{
   margin-bottom:60px;
 }
 
-/* LOGO WATERMARK */
+/* ================= SERVICES ================= */
 
-.logo-bg-section{
-  position:relative;
-  overflow:hidden;
+.service{
+  display:grid;
+  grid-template-columns:420px 1fr;
+  align-items:center;
+  gap:40px;
+  margin-bottom:80px;
 }
 
-.logo-bg-section::before{
-  content:"";
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  width:700px;
-  height:700px;
-  background:url('logo.png') no-repeat center center/contain;
-  opacity:0.05;
-  z-index:0;
-  pointer-events:none;
+.service img{
+  width:420px;
+  border-radius:15px;
+  box-shadow:0 0 25px #00bfff;
 }
 
-.logo-bg-section > *{
-  position:relative;
-  z-index:1;
+.service-content h3{
+  color:#00bfff;
+  font-size:30px;
+  margin-bottom:15px;
 }
 
-/* SERVICES (GRID LAYOUT) */
-
-.service {
-  display: grid;
-  grid-template-columns: 420px 1fr;  
-  align-items: center;
-  gap: 30px;
-  margin-bottom: 80px;
+.service-content p{
+  line-height:1.9;
+  font-size:17px;
 }
 
-.service img {
-  width: 420px;
-  border-radius: 15px;
-  box-shadow: 0 0 25px #00bfff;
-}
-
-.service-content h3 {
-  color: #00bfff;
-  font-size: 30px;
-  margin-bottom: 15px;
-}
-
-.service-content p {
-  line-height: 1.9;
-  font-size: 17px;
-}
-
-/* Responsive Services */
-@media screen and (max-width:768px){
-  .service { grid-template-columns: 1fr; justify-items: center; text-align: center; }
-  .service img { width: 70%; }
-}
-
-
-/* WHY US */
+/* ================= WHY / PROCESS ================= */
 
 .why{
   background:#111827;
@@ -250,14 +159,12 @@ section{
   font-size:18px;
 }
 
-/* PROCESS */
-
 .process-step{
   margin-bottom:25px;
   font-size:18px;
 }
 
-/* TESTIMONIAL */
+/* ================= TESTIMONIAL ================= */
 
 .testimonial{
   background:#111827;
@@ -266,7 +173,7 @@ section{
   margin-bottom:30px;
 }
 
-/* CTA */
+/* ================= CTA ================= */
 
 .cta{
   text-align:center;
@@ -279,7 +186,7 @@ section{
   font-size:35px;
 }
 
-/* OWNER */
+/* ================= OWNER ================= */
 
 .owner{
   background:#111827;
@@ -288,18 +195,12 @@ section{
   border-top:2px solid #00bfff;
 }
 
-/* MESSAGE SECTION */
+/* ================= MESSAGE FORM ================= */
 
 .message-section{
   background:#111827;
-  padding:80px 10%;
+  padding:80px 8%;
   text-align:center;
-}
-
-.message-section h2{
-  color:#00bfff;
-  font-size:38px;
-  margin-bottom:40px;
 }
 
 .message-form{
@@ -316,7 +217,6 @@ section{
   border:none;
   border-radius:8px;
   font-size:16px;
-  outline:none;
 }
 
 .message-form textarea{
@@ -338,7 +238,7 @@ section{
   background:#009acd;
 }
 
-/* CONTACT */
+/* ================= CONTACT ================= */
 
 .contact-box{
   text-align:center;
@@ -346,7 +246,7 @@ section{
   line-height:2;
 }
 
-/* WHATSAPP */
+/* ================= WHATSAPP ================= */
 
 .whatsapp{
   position:fixed;
@@ -360,7 +260,7 @@ section{
   font-size:25px;
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 
 footer{
   background:black;
@@ -369,31 +269,49 @@ footer{
   color:gray;
 }
 
-/* MEDIA QUERIES FOR RESPONSIVENESS */
+/* ================= RESPONSIVE ================= */
 
-/* Tablet */
 @media screen and (max-width:1024px){
-  header img { max-height:50px; }
+  header img{ max-height:50px; }
 }
 
-/* Mobile */
 @media screen and (max-width:768px){
-  header {
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 5%;
+
+  header{
+    flex-direction:column;
+    gap:15px;
   }
-  header img { max-height:40px; margin-bottom:10px; }
-  nav { flex-direction: column; align-items: center; gap:10px; }
-  nav a { margin:5px 0; }
-  .service { grid-template-columns: 1fr; justify-items: center; text-align: center; }
-  .service img { width:70%; }
+
+  nav{
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .hero h1{
+    font-size:40px;
+  }
+
+  .hero p{
+    width:90%;
+    font-size:18px;
+  }
+
+  .service{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+
+  .service img{
+    width:70%;
+    margin:auto;
+  }
 }
 
-/* Small Phones */
 @media screen and (max-width:480px){
-  header img { max-height:35px; }
-  nav a { font-size:14px; }
+  header img{ max-height:35px; }
+  nav a{ font-size:14px; }
+  .hero h1{ font-size:32px; }
+  .hero p{ font-size:16px; }
 }
 
 </style>
