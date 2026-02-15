@@ -4,6 +4,9 @@
 <title>Itinex Solutions | Advanced IT & Cyber Security Services</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<!-- Google Verification -->
+<meta name="google-site-verification" content="apnUMY0XmLTdPqeJFdq51spZkIz2LSqCNbCii7cWUFo" />
+
 <style>
 
 body{
@@ -98,32 +101,6 @@ color:#00bfff;
 margin-bottom:60px;
 }
 
-/* LOGO WATERMARK SECTIONS */
-
-.logo-bg-section{
-position:relative;
-overflow:hidden;
-}
-
-.logo-bg-section::before{
-content:"";
-position:absolute;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
-width:700px;
-height:700px;
-background:url('logo.png') no-repeat center center/contain;
-opacity:0.05;
-z-index:0;
-pointer-events:none;
-}
-
-.logo-bg-section > *{
-position:relative;
-z-index:1;
-}
-
 /* SERVICES */
 
 .service{
@@ -154,7 +131,7 @@ line-height:1.9;
 font-size:17px;
 }
 
-/* WHY US */
+/* WHY */
 
 .why{
 background:#111827;
@@ -204,18 +181,12 @@ text-align:center;
 border-top:2px solid #00bfff;
 }
 
-/* MESSAGE SECTION */
+/* MESSAGE */
 
 .message-section{
 background:#111827;
 padding:80px 10%;
 text-align:center;
-}
-
-.message-section h2{
-color:#00bfff;
-font-size:38px;
-margin-bottom:40px;
 }
 
 .message-form{
@@ -232,11 +203,9 @@ padding:15px;
 border:none;
 border-radius:8px;
 font-size:16px;
-outline:none;
 }
 
 .message-form textarea{
-resize:none;
 height:150px;
 }
 
@@ -254,15 +223,23 @@ cursor:pointer;
 background:#009acd;
 }
 
-/* CONTACT */
+/* SOCIAL */
 
-.contact-box{
+.social-links{
+margin-top:40px;
 text-align:center;
-font-size:18px;
-line-height:2;
 }
 
-/* WHATSAPP */
+.social-links a{
+color:#00bfff;
+margin:0 15px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.social-links a:hover{
+color:white;
+}
 
 .whatsapp{
 position:fixed;
@@ -275,8 +252,6 @@ border-radius:50%;
 text-decoration:none;
 font-size:25px;
 }
-
-/* FOOTER */
 
 footer{
 background:black;
@@ -305,8 +280,11 @@ color:gray;
 <p>Complete IT Infrastructure, Cyber Security, Networking & Enterprise Solutions in Jammu</p>
 </div>
 
+<!-- ✅ SERVICES SECTION (UNCHANGED) -->
+
 <section id="services">
 <h2 class="section-title">Our Professional Services</h2>
+
 <div class="service">
 <img src="cctv.png">
 <div class="service-content">
@@ -314,28 +292,39 @@ color:gray;
 <p>High-quality IP & Analog CCTV setup for residential and commercial environments.</p>
 </div>
 </div>
+
+<div class="service">
+<img src="networking.jpg">
+<div class="service-content">
+<h3>🌐 Enterprise Networking Solutions</h3>
+<p>Structured cabling, router & switch configuration, LAN/WAN setup, firewall integration.</p>
+</div>
+</div>
+
+<div class="service">
+<img src="server.jpg">
+<div class="service-content">
+<h3>🖥 Server Setup & Management</h3>
+<p>Windows & Linux server installation, Active Directory & enterprise system administration.</p>
+</div>
+</div>
+
+<div class="service">
+<img src="cyber.jpg">
+<div class="service-content">
+<h3>🔐 Advanced Cyber Security</h3>
+<p>Firewall setup, Endpoint protection, Vulnerability assessment & IT security audit.</p>
+</div>
+</div>
+
 </section>
 
-<section id="why" class="why logo-bg-section">
-<h2 class="section-title">Why Choose Itinex Solutions?</h2>
-<div class="why-box">✔ Certified IT Infrastructure Specialists</div>
-<div class="why-box">✔ Fast Deployment & Reliable Support</div>
-<div class="why-box">✔ Affordable Enterprise Solutions</div>
-<div class="why-box">✔ 24/7 Technical Assistance</div>
-</section>
-
-<section class="logo-bg-section">
-<h2 class="section-title">Our Working Process</h2>
-<div class="process-step">1️⃣ Requirement Analysis & Consultation</div>
-<div class="process-step">2️⃣ Infrastructure Planning & Security Design</div>
-<div class="process-step">3️⃣ Installation & Configuration</div>
-<div class="process-step">4️⃣ Testing, Optimization & Maintenance</div>
-</section>
+<!-- MESSAGE SECTION WITH WEB3FORMS -->
 
 <section class="message-section">
 <h2>Send Us a Message</h2>
 
-<form class="message-form" action="https://api.web3forms.com/submit" method="POST">
+<form action="https://api.web3forms.com/submit" method="POST" class="message-form">
 <input type="hidden" name="access_key" value="2e7c2d7d-7975-4049-9b27">
 <input type="text" name="name" placeholder="Your Full Name" required>
 <input type="email" name="email" placeholder="Your Email Address" required>
@@ -344,23 +333,13 @@ color:gray;
 <button type="submit">Submit Message</button>
 </form>
 
-</section>
-
-<section id="contact">
-<h2 class="section-title">Contact Us</h2>
-<div class="contact-box">
-📧 Email: info@itinexsolutions.in<br>
-📞 Phone: +91-XXXXXXXXXX<br>
-📍 Location: Jammu, India
+<div class="social-links">
+<a href="#">Facebook</a>
+<a href="#">Instagram</a>
+<a href="#">LinkedIn</a>
+<a href="#">YouTube</a>
 </div>
-</section>
 
-<section style="text-align:center; padding:40px; background:#111827;">
-<h2 style="color:#00bfff;">Follow Us</h2>
-<a href="#" style="color:#00bfff; margin:0 15px; font-size:20px; text-decoration:none;">Facebook</a>
-<a href="#" style="color:#00bfff; margin:0 15px; font-size:20px; text-decoration:none;">Instagram</a>
-<a href="#" style="color:#00bfff; margin:0 15px; font-size:20px; text-decoration:none;">LinkedIn</a>
-<a href="#" style="color:#00bfff; margin:0 15px; font-size:20px; text-decoration:none;">YouTube</a>
 </section>
 
 <footer>
