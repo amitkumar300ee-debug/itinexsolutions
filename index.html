@@ -17,7 +17,7 @@ body{
 }
 
 /* HEADER (RESPONSIVE) */
-
+  
 header {
   background: #111827;
   padding: 15px 10%;
@@ -35,6 +35,45 @@ header img {
   width: auto;
   transition: all 0.3s ease; /* smooth resizing */
 }
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+nav a {
+  color: #00bfff;
+  margin: 5px 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: white;
+}
+
+/* MEDIA QUERIES FOR HEADER/LOGO */
+@media screen and (max-width:1024px){
+  header img { max-height:50px; }
+}
+
+@media screen and (max-width:768px){
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 5%;
+  }
+  header img { max-height:40px; margin-bottom:10px; }
+  nav { flex-direction: column; align-items: center; gap:10px; }
+  nav a { margin:5px 0; }
+}
+
+@media screen and (max-width:480px){
+  header img { max-height:35px; }
+  nav a { font-size:14px; }
+}
+
 
 /* NAVIGATION */
 
@@ -57,45 +96,73 @@ nav a:hover {
 
 /* HERO */
 
-.hero{
-  position:relative;
-  height:100vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  overflow:hidden;
+.hero {
+  position: relative;
+  min-height: 600px;      /* phone desktop mode aur small screens ke liye minimum height */
+  height: 100vh;          /* normal desktop height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
 }
 
-.hero::before{
-  content:"";
-  position:absolute;
-  width:100%;
-  height:100%;
-  background:url('hero-bgg.jpg') no-repeat center center/cover;
-  z-index:-2;
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url('hero-bgg.jpg') no-repeat center center;
+  background-size: cover; /* ensures image always covers container */
+  z-index: -2;
 }
 
-.hero::after{
-  content:"";
-  position:absolute;
-  width:100%;
-  height:100%;
-  background:rgba(0,0,0,0.75);
-  z-index:-1;
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.75);
+  z-index: -1;
 }
 
-.hero h1{
-  font-size:60px;
-  color:#00e0ff;
-  text-shadow:0 0 25px #00e0ff;
+.hero h1 {
+  font-size: 60px;
+  color: #00e0ff;
+  text-shadow: 0 0 25px #00e0ff;
 }
 
-.hero p{
-  width:70%;
-  font-size:22px;
-  margin-top:15px;
+.hero p {
+  width: 70%;
+  font-size: 22px;
+  margin-top: 15px;
+}
+
+/* RESPONSIVE HERO */
+@media screen and (max-width:768px){
+  .hero {
+    min-height: 500px;  /* mobile height fix */
+  }
+  .hero h1 {
+    font-size: 40px;
+  }
+  .hero p {
+    font-size: 18px;
+    width: 90%;
+  }
+}
+
+@media screen and (max-width:480px){
+  .hero {
+    min-height: 400px;  /* small phones */
+  }
+  .hero h1 {
+    font-size: 32px;
+  }
+  .hero p {
+    font-size: 16px;
+  }
 }
 
 /* SECTIONS */
@@ -141,14 +208,14 @@ section{
 
 .service {
   display: grid;
-  grid-template-columns: 420px 1fr;  /* image fixed, content flexible */
+  grid-template-columns: 420px 1fr;  
   align-items: center;
   gap: 30px;
   margin-bottom: 80px;
 }
 
 .service img {
-  width: 420px;          /* repair.jpg ke liye same size */
+  width: 420px;
   border-radius: 15px;
   box-shadow: 0 0 25px #00bfff;
 }
@@ -163,6 +230,13 @@ section{
   line-height: 1.9;
   font-size: 17px;
 }
+
+/* Responsive Services */
+@media screen and (max-width:768px){
+  .service { grid-template-columns: 1fr; justify-items: center; text-align: center; }
+  .service img { width: 70%; }
+}
+
 
 /* WHY US */
 
