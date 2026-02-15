@@ -1,19 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
 <title>Itinex Solutions | Advanced IT & Cyber Security Services</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 
-/* ================= GLOBAL ================= */
-
+/* ================= RESET ================= */
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
 }
 
+html,body{
+  width:100%;
+  overflow-x:hidden;
+}
+
+/* ================= GLOBAL ================= */
 body{
   font-family:Arial, sans-serif;
   background:#0a0f1c;
@@ -23,12 +29,10 @@ body{
 
 img{
   max-width:100%;
-  height:auto;
   display:block;
 }
 
 /* ================= HEADER ================= */
-
 header{
   background:#111827;
   padding:15px 8%;
@@ -38,7 +42,6 @@ header{
   position:sticky;
   top:0;
   z-index:1000;
-  flex-wrap:wrap;
 }
 
 header img{
@@ -48,7 +51,6 @@ header img{
 nav{
   display:flex;
   gap:20px;
-  flex-wrap:wrap;
 }
 
 nav a{
@@ -62,29 +64,25 @@ nav a:hover{
 }
 
 /* ================= HERO ================= */
-
 .hero{
   position:relative;
+  width:100%;
   height:100vh;
   display:flex;
   flex-direction:column;
   justify-content:center;
   align-items:center;
   text-align:center;
-  padding:20px;
   background:url('hero-bgg.jpg') no-repeat center center;
-  background-size:cover;   /* IMPORTANT */
-  background-position:center;
+  background-size:cover;
+  overflow:hidden;
 }
 
-/* Dark overlay */
+/* overlay */
 .hero::after{
   content:"";
   position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
+  inset:0;
   background:rgba(0,0,0,0.75);
   z-index:0;
 }
@@ -93,7 +91,6 @@ nav a:hover{
   font-size:60px;
   color:#00e0ff;
   text-shadow:0 0 25px #00e0ff;
-  position:relative;
   z-index:1;
 }
 
@@ -101,12 +98,10 @@ nav a:hover{
   width:70%;
   font-size:22px;
   margin-top:15px;
-  position:relative;
   z-index:1;
 }
 
 /* ================= SECTIONS ================= */
-
 section{
   padding:80px 8%;
 }
@@ -119,12 +114,11 @@ section{
 }
 
 /* ================= SERVICES ================= */
-
 .service{
   display:grid;
   grid-template-columns:420px 1fr;
-  align-items:center;
   gap:40px;
+  align-items:center;
   margin-bottom:80px;
 }
 
@@ -141,12 +135,11 @@ section{
 }
 
 .service-content p{
-  line-height:1.9;
   font-size:17px;
+  line-height:1.9;
 }
 
-/* ================= OTHER SECTIONS ================= */
-
+/* ================= WHY ================= */
 .why{
   background:#111827;
   text-align:center;
@@ -157,11 +150,13 @@ section{
   font-size:18px;
 }
 
+/* ================= PROCESS ================= */
 .process-step{
   margin-bottom:25px;
   font-size:18px;
 }
 
+/* ================= TESTIMONIAL ================= */
 .testimonial{
   background:#111827;
   padding:40px;
@@ -169,10 +164,11 @@ section{
   margin-bottom:30px;
 }
 
+/* ================= CTA ================= */
 .cta{
-  text-align:center;
   background:#00bfff;
   color:black;
+  text-align:center;
   padding:60px;
 }
 
@@ -180,6 +176,7 @@ section{
   font-size:35px;
 }
 
+/* ================= OWNER ================= */
 .owner{
   background:#111827;
   padding:60px;
@@ -187,6 +184,7 @@ section{
   border-top:2px solid #00bfff;
 }
 
+/* ================= MESSAGE ================= */
 .message-section{
   background:#111827;
   padding:80px 8%;
@@ -228,12 +226,14 @@ section{
   background:#009acd;
 }
 
+/* ================= CONTACT ================= */
 .contact-box{
   text-align:center;
   font-size:18px;
   line-height:2;
 }
 
+/* ================= WHATSAPP ================= */
 .whatsapp{
   position:fixed;
   bottom:20px;
@@ -242,10 +242,11 @@ section{
   color:white;
   padding:15px;
   border-radius:50%;
-  text-decoration:none;
   font-size:25px;
+  text-decoration:none;
 }
 
+/* ================= FOOTER ================= */
 footer{
   background:black;
   padding:20px;
@@ -254,8 +255,7 @@ footer{
 }
 
 /* ================= RESPONSIVE ================= */
-
-@media screen and (max-width:768px){
+@media(max-width:768px){
 
   header{
     flex-direction:column;
@@ -268,8 +268,8 @@ footer{
   }
 
   .hero{
-    height:100vh;
-    background-size:cover;  /* FIXED */
+    height:100svh;
+    background-size:cover;
   }
 
   .hero h1{
@@ -292,30 +292,29 @@ footer{
   }
 }
 
-@media screen and (max-width:480px){
+@media(max-width:480px){
   header img{ max-height:35px; }
   nav a{ font-size:14px; }
 }
 
 </style>
-
 </head>
 
 <body>
 
 <header>
-<img src="logo.png">
-<nav>
-<a href="#home">Home</a>
-<a href="#services">Services</a>
-<a href="#why">Why Us</a>
-<a href="#contact">Contact</a>
-</nav>
+  <img src="logo.png">
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#why">Why Us</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
 <div class="hero" id="home">
-<h1>ITINEX SOLUTIONS</h1>
-<p>Complete IT Infrastructure, Cyber Security, Networking & Enterprise Solutions in Jammu</p>
+  <h1>ITINEX SOLUTIONS</h1>
+  <p>Complete IT Infrastructure, Cyber Security, Networking & Enterprise Solutions in Jammu</p>
 </div>
 
 <section id="services">
@@ -333,7 +332,7 @@ footer{
     <img src="networking.jpg">
     <div class="service-content">
       <h3>🌐 Enterprise Networking Solutions</h3>
-      <p>Structured cabling, router & switch configuration, LAN/WAN setup, firewall integration.</p>
+      <p>Structured cabling, router & switch configuration, LAN/WAN setup.</p>
     </div>
   </div>
 
@@ -341,15 +340,7 @@ footer{
     <img src="server.jpg">
     <div class="service-content">
       <h3>🖥 Server Setup & Management</h3>
-      <p>Windows & Linux server installation, Active Directory & enterprise system administration.</p>
-    </div>
-  </div>
-
-  <div class="service">
-    <img src="cyber.jpg">
-    <div class="service-content">
-      <h3>🔐 Advanced Cyber Security</h3>
-      <p>Firewall setup, Endpoint protection, Vulnerability assessment & IT security audit.</p>
+      <p>Windows & Linux server installation & enterprise administration.</p>
     </div>
   </div>
 
@@ -357,86 +348,10 @@ footer{
     <img src="repair.jpg">
     <div class="service-content">
       <h3>🛠 Computer Repair & IT Support</h3>
-      <p>Hardware troubleshooting, OS installation, remote IT assistance and Annual Maintenance Contracts (AMC).</p>
+      <p>Hardware repair, OS installation, AMC & remote support.</p>
     </div>
   </div>
-
 </section>
-
-
-
-<section id="why" class="why logo-bg-section">
-<h2 class="section-title">Why Choose Itinex Solutions?</h2>
-
-<div class="why-box">✔ Certified IT Infrastructure Specialists</div>
-<div class="why-box">✔ Fast Deployment & Reliable Support</div>
-<div class="why-box">✔ Affordable Enterprise Solutions</div>
-<div class="why-box">✔ 24/7 Technical Assistance</div>
-
-</section>
-
-<section class="logo-bg-section">
-<h2 class="section-title">Our Working Process</h2>
-
-<div class="process-step">1️⃣ Requirement Analysis & Consultation</div>
-<div class="process-step">2️⃣ Infrastructure Planning & Security Design</div>
-<div class="process-step">3️⃣ Installation & Configuration</div>
-<div class="process-step">4️⃣ Testing, Optimization & Maintenance</div>
-
-</section>
-
-<section>
-<h2 class="section-title">Client Testimonials</h2>
-
-<div class="testimonial">
-"Professional team and excellent service. Highly recommended for business networking setup."
-</div>
-
-<div class="testimonial">
-"They secured our office network and improved performance significantly."
-</div>
-
-</section>
-
-<section class="cta">
-<h2>Need Professional IT Solutions?</h2>
-<p>Contact us today for secure and reliable infrastructure services.</p>
-</section>
-
-<section class="owner">
-<h2>Company Owner</h2>
-<p><strong>Amit Kumar</strong></p>
-<p>Founder & IT Infrastructure Specialist</p>
-</section>
-
-<section class="message-section">
-<h2>Send Us a Message</h2>
-
-<form class="message-form" action="https://api.web3forms.com/submit" method="POST">
-
-<input type="hidden" name="access_key" value="2e7c2d7d-7975-4049-9b27-59832d54f4b2">
-
-<input type="text" name="name" placeholder="Your Full Name" required>
-<input type="email" name="email" placeholder="Your Email Address" required>
-<input type="tel" name="phone" placeholder="Your Phone Number">
-<textarea name="message" placeholder="Write Your Message Here..." required></textarea>
-
-<button type="submit">Submit Message</button>
-
-</form>
-</section>
-
-
-<section id="contact">
-<h2 class="section-title">Contact Us</h2>
-<div class="contact-box">
-📧 Email: info@itinexsolutions.in<br>
-📞 Phone: +91-XXXXXXXXXX<br>
-📍 Location: Jammu, India
-</div>
-</section>
-
-<a href="https://wa.me/91XXXXXXXXXX" class="whatsapp">💬</a>
 
 <footer>
 © 2026 Itinex Solutions | All Rights Reserved
