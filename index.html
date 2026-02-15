@@ -4,7 +4,6 @@
 <title>Itinex Solutions | Advanced IT & Cyber Security Services</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Google Verification -->
 <meta name="google-site-verification" content="apnUMY0XmLTdPqeJFdq51spZkIz2LSqCNbCii7cWUFo" />
 
 <style>
@@ -101,6 +100,32 @@ color:#00bfff;
 margin-bottom:60px;
 }
 
+/* LOGO WATERMARK SECTIONS */
+
+.logo-bg-section{
+position:relative;
+overflow:hidden;
+}
+
+.logo-bg-section::before{
+content:"";
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+width:700px;
+height:700px;
+background:url('logo.png') no-repeat center center/contain;
+opacity:0.05;
+z-index:0;
+pointer-events:none;
+}
+
+.logo-bg-section > *{
+position:relative;
+z-index:1;
+}
+
 /* SERVICES */
 
 .service{
@@ -131,7 +156,7 @@ line-height:1.9;
 font-size:17px;
 }
 
-/* WHY */
+/* WHY US */
 
 .why{
 background:#111827;
@@ -181,12 +206,18 @@ text-align:center;
 border-top:2px solid #00bfff;
 }
 
-/* MESSAGE */
+/* MESSAGE SECTION */
 
 .message-section{
 background:#111827;
 padding:80px 10%;
 text-align:center;
+}
+
+.message-section h2{
+color:#00bfff;
+font-size:38px;
+margin-bottom:40px;
 }
 
 .message-form{
@@ -203,9 +234,11 @@ padding:15px;
 border:none;
 border-radius:8px;
 font-size:16px;
+outline:none;
 }
 
 .message-form textarea{
+resize:none;
 height:150px;
 }
 
@@ -223,7 +256,7 @@ cursor:pointer;
 background:#009acd;
 }
 
-/* SOCIAL */
+/* SOCIAL MEDIA */
 
 .social-links{
 margin-top:40px;
@@ -241,6 +274,16 @@ font-weight:bold;
 color:white;
 }
 
+/* CONTACT */
+
+.contact-box{
+text-align:center;
+font-size:18px;
+line-height:2;
+}
+
+/* WHATSAPP */
+
 .whatsapp{
 position:fixed;
 bottom:20px;
@@ -252,6 +295,8 @@ border-radius:50%;
 text-decoration:none;
 font-size:25px;
 }
+
+/* FOOTER */
 
 footer{
 background:black;
@@ -279,8 +324,6 @@ color:gray;
 <h1>ITINEX SOLUTIONS</h1>
 <p>Complete IT Infrastructure, Cyber Security, Networking & Enterprise Solutions in Jammu</p>
 </div>
-
-<!-- ✅ SERVICES SECTION (UNCHANGED) -->
 
 <section id="services">
 <h2 class="section-title">Our Professional Services</h2>
@@ -319,13 +362,11 @@ color:gray;
 
 </section>
 
-<!-- MESSAGE SECTION WITH WEB3FORMS -->
-
 <section class="message-section">
 <h2>Send Us a Message</h2>
 
 <form action="https://api.web3forms.com/submit" method="POST" class="message-form">
-<input type="hidden" name="access_key" value="2e7c2d7d-7975-4049-9b27">
+<input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
 <input type="text" name="name" placeholder="Your Full Name" required>
 <input type="email" name="email" placeholder="Your Email Address" required>
 <input type="tel" name="phone" placeholder="Your Phone Number">
@@ -341,6 +382,17 @@ color:gray;
 </div>
 
 </section>
+
+<section id="contact">
+<h2 class="section-title">Contact Us</h2>
+<div class="contact-box">
+📧 Email: info@itinexsolutions.in<br>
+📞 Phone: +91-XXXXXXXXXX<br>
+📍 Location: Jammu, India
+</div>
+</section>
+
+<a href="https://wa.me/91XXXXXXXXXX" class="whatsapp">💬</a>
 
 <footer>
 © 2026 Itinex Solutions | All Rights Reserved
