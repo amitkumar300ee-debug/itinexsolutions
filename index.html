@@ -145,30 +145,11 @@ section{
   font-size:17px;
 }
 
-/* ================= WHY SECTION (neon-bg.jpg) ================= */
+/* ================= OTHER SECTIONS ================= */
 
 .why{
-  background:url('neon-bg.jpg') no-repeat center center;
-  background-size:cover;
-  position:relative;
+  background:#111827;
   text-align:center;
-  padding:80px 8%;
-  overflow:hidden;
-}
-
-.why::before{
-  content:"";
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background:rgba(0,0,0,0.80);
-}
-
-.why > *{
-  position:relative;
-  z-index:1;
 }
 
 .why-box{
@@ -176,38 +157,10 @@ section{
   font-size:18px;
 }
 
-
-/* ================= WORKING PROCESS (company.jpg) ================= */
-
-.process-bg{
-  background:url('company.jpg') no-repeat center center;
-  background-size:cover;
-  position:relative;
-  padding:80px 8%;
-  text-align:center;
-  overflow:hidden;
-}
-
-.process-bg::before{
-  content:"";
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background:rgba(0,0,0,0.80);
-}
-
-.process-bg > *{
-  position:relative;
-  z-index:1;
-}
-
 .process-step{
   margin-bottom:25px;
   font-size:18px;
 }
-
 
 .testimonial{
   background:#111827;
@@ -412,8 +365,7 @@ footer{
 
 
 
-<section class="hero-bgg.jpg">
-
+<section id="why" class="why logo-bg-section">
 <h2 class="section-title">Why Choose Itinex Solutions?</h2>
 
 <div class="why-box">✔ Certified IT Infrastructure Specialists</div>
@@ -423,7 +375,7 @@ footer{
 
 </section>
 
-<section class="hero-bgg.jpg">
+<section class="logo-bg-section">
 <h2 class="section-title">Our Working Process</h2>
 
 <div class="process-step">1️⃣ Requirement Analysis & Consultation</div>
