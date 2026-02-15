@@ -251,6 +251,62 @@ footer{
   padding:20px;
   text-align:center;
   color:gray;
+
+}
+
+/* ===== WORKING PROCESS LOGO ===== */
+
+.logo-bg-1{
+  position:relative;
+  overflow:hidden;
+}
+
+.logo-bg-1::before{
+  content:"";
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:500px;
+  height:500px;
+  background:url('logo.png') no-repeat center center;
+  background-size:contain;
+  opacity:0.06;
+  z-index:0;
+  pointer-events:none;
+}
+
+.logo-bg-1 > *{
+  position:relative;
+  z-index:1;
+}
+
+
+/* ===== TESTIMONIAL LOGO ===== */
+
+.logo-bg-2{
+  position:relative;
+  overflow:hidden;
+}
+
+.logo-bg-2::before{
+  content:"";
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:500px;
+  height:500px;
+  background:url('logo2.png') no-repeat center center;
+  background-size:contain;
+  opacity:0.06;
+  z-index:0;
+  pointer-events:none;
+}
+
+.logo-bg-2 > *{
+  position:relative;
+  z-index:1;
 }
 
 /* ================= RESPONSIVE ================= */
